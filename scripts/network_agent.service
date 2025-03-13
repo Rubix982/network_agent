@@ -1,0 +1,12 @@
+[Unit]
+Description=Networking Monitoring Agent
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /Users/saif.islam/code/network_agent/network_agent/agent.py
+Restart=always
+User=saif.islam
+WorkingDirectory=/Users/saif.islam/code/network_agent
+
+[Install]
+WantedBy=multi-user.target
